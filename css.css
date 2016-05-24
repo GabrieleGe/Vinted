@@ -1,0 +1,162 @@
+* {
+    box-sizing: border-box;
+}
+
+@media only screen and (min-width: 1024px) {
+    .imageContainer {
+        width: calc(100% / 3 - 40px);
+        margin: 18px;
+
+    }
+}
+
+@media (min-width: 481px) and (max-width: 1023px) {
+    .imageContainer {
+        width: calc(100% / 2 - 30px);
+        margin: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .imageContainer {
+        width: calc(100% - 30px);
+        margin: 15px;
+    }
+}
+
+
+
+.imageContainer {
+    height: auto;
+    display: inline-block;
+    position: relative;
+}
+
+.image {
+    border-radius: 2%;
+    width: 100%;
+}
+
+body {
+    width: 100%;
+    background-color: #E8E8E8;
+}
+
+#mainContainer {
+    margin: 13px;
+}
+
+.overlayWithContent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    height: 100%;
+    display: none;
+}
+
+.overlay{
+    background: black;
+    position: absolute;
+    top: 0;
+    border-radius: 2%;
+    left: 0;
+    opacity: 0.4;
+    width: 100%;
+    text-align: center;
+    height: 100%;
+    display: none;
+
+}
+
+.favouriteButton {
+    background: rgba(144, 255, 178, 0.42);
+    border: 1px solid #E8E8E8;
+    color: white;
+    position: absolute;
+    font-weight: bold;
+    padding: 10px 20px 10px 20px;
+    border-radius: 20px;
+    bottom: 17%;
+    font-size: 15px;
+    transform: translateX(-50%);
+    transition: all 0.3s ease 0s;
+}
+
+.favouriteButton:hover {
+    background: transparent;
+    border: 1px solid #E8E8E8;
+    color: #E8E8E8;
+}
+
+.imageTitle {
+    top: 35%;
+    text-align: center;
+    position: relative;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+hr {
+    width: 25%;
+    top: 37%;
+    position: relative;
+}
+
+.imageAuthor {
+    top: 40%;
+    text-align: center;
+    position: relative;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/*heart*/
+.heart {
+    position: absolute;
+    display: none;
+    width: 25px;
+    height: 22px;
+    top: 20px;
+    right: 20px;
+}
+
+.heart:before,
+.heart:after {
+    position: absolute;
+    content: "";
+    left: 12px;
+    top: 0;
+    width: 12px;
+    height: 20px;
+    background: #90ffb2;
+    -moz-border-radius: 12px 12px 0 0;
+    border-radius: 12px 12px 0 0;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-transform-origin: 0 100%;
+    -moz-transform-origin: 0 100%;
+    -ms-transform-origin: 0 100%;
+    -o-transform-origin: 0 100%;
+    transform-origin: 0 100%;
+}
+
+.heart:after {
+    left: 0;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-transform-origin: 100% 100%;
+    -moz-transform-origin: 100% 100%;
+    -ms-transform-origin: 100% 100%;
+    -o-transform-origin: 100% 100%;
+    transform-origin: 100% 100%;
+}
